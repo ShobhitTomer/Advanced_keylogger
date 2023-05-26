@@ -49,7 +49,7 @@ time_iteration = 15
 number_of_iterations_end = 3
 
 email_address = "visual.alchemy.0708@gmail.com"  # Enter disposable email here
-password = "teoqvrwesjcbvzmo"  # Enter email password here
+password = ""  # Enter email password here
 
 username = getpass.getuser()
 
